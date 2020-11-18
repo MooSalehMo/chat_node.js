@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link rel="stylesheet" href="/fonst/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/chat.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="rwo">
+      <div class="col-md-6 ml-auto mr-auto mt-4">
+        <h4 id="title"></h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto mt-4">
+        <form action="" id="loginForm">
+          <div class="input-group">
+            <input type="text" autocomplete="off" id="nameInput" class="form-control" placeholder="Name">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-outline-success">Send</button> 
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto mt-4">
+        <form action="" id="messageForm" class="hidden">
+          <div class="input-group">
+            <input type="text" autocomplete="off" id="messageInput" class="form-control" placeholder="chat">
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-outline-primary">Send</button> 
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 ml-auto mr-auto mt-4 border-danger" id="messagesContainer" >
+      </div>
+    </div>
+
+  </div>
+  
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>
